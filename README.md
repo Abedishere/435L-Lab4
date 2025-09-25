@@ -2,6 +2,7 @@
 
 ## Lab 4: Version Control, Git and GitHub
 **Student:** Abdel Rahman El Kouche
+
 **Student:** Karim Abou Daher
 
 ### Project Description
