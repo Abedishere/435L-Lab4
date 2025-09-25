@@ -2,6 +2,7 @@
 
 ## Lab 4: Version Control, Git and GitHub
 **Student:** Abdel Rahman El Kouche
+**Student:** Karim Abou Daher
 
 ### Project Description
 This repository contains the School Management System project developed in Lab 2, now organized for collaborative development using Git version control. The project demonstrates the integration of different GUI frameworks (Tkinter and PyQt) with a comprehensive database management system.
