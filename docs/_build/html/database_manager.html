@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>database_manager module &mdash; PyQt5/Tkinter 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="integrated_gui module" href="integrated_gui.html" />
+    <link rel="prev" title="documented proj" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyQt5/Tkinter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">documented proj</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">database_manager module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#database_manager.DatabaseManager"><code class="docutils literal notranslate"><span class="pre">DatabaseManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.add_course"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.add_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.add_instructor"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.add_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.add_student"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.add_student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.backup_database"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.backup_database()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.delete_course"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.delete_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.delete_instructor"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.delete_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.delete_student"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.delete_student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.export_to_csv"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.export_to_csv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.get_all_courses"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_all_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.get_all_instructors"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_all_instructors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.get_all_students"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_all_students()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.get_course_students"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_course_students()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.get_database_statistics"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_database_statistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.get_instructor_courses"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_instructor_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.get_student_courses"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_student_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.init_database"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.init_database()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.load_system_from_db"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.load_system_from_db()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.register_student_to_course"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.register_student_to_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.search_courses"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.search_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.search_instructors"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.search_instructors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.search_students"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.search_students()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.sync_system_to_db"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.sync_system_to_db()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.unregister_student_from_course"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.unregister_student_from_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.update_course"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.update_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.update_instructor"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.update_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database_manager.DatabaseManager.update_student"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.update_student()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integrated_gui.html">integrated_gui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyqt_gui.html">pyqt_gui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="school_management.html">school_management module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyQt5/Tkinter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">documented proj</a></li>
+      <li class="breadcrumb-item active">database_manager module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/database_manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-database_manager">
+<span id="database-manager-module"></span><h1>database_manager module<a class="headerlink" href="#module-database_manager" title="Link to this heading"></a></h1>
+<p>Database Management Module</p>
+<p>This module provides database functionality for the school management system using SQLite.
+It handles all database operations including CRUD operations, search functionality,
+backup/restore capabilities, and data synchronization with the core system objects.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">database_manager.</span></span><span class="sig-name descname"><span class="pre">DatabaseManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'school_management.db'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Database manager class for the school management system.</p>
+<p>Provides comprehensive database operations for managing students, instructors,
+courses, and their relationships using SQLite. Includes features like automatic
+timestamping, data integrity constraints, and backup functionality.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>db_path</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the SQLite database file, defaults to “school_management.db”</p>
+</dd>
+<dt class="field-even">Variables<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>db_path</strong> (<em>str</em>) – Path to the database file</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.add_course">
+<span class="sig-name descname"><span class="pre">add_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">course</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="school_management.html#school_management.Course" title="school_management.Course"><span class="pre">Course</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.add_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.add_course" title="Link to this definition"></a></dt>
+<dd><p>Add a new course to the database.</p>
+<p>Inserts a course record with optional instructor assignment.
+Validates foreign key relationships and handles constraint violations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>course</strong> (<a class="reference internal" href="school_management.html#school_management.Course" title="school_management.Course"><em>Course</em></a>) – The course object to add to the database</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if course was added successfully, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.add_instructor">
+<span class="sig-name descname"><span class="pre">add_instructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instructor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="school_management.html#school_management.Instructor" title="school_management.Instructor"><span class="pre">Instructor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.add_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.add_instructor" title="Link to this definition"></a></dt>
+<dd><p>Add a new instructor to the database.</p>
+<p>Inserts an instructor record with all validation constraints applied.
+Handles duplicate instructor ID and email address errors gracefully.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>instructor</strong> (<a class="reference internal" href="school_management.html#school_management.Instructor" title="school_management.Instructor"><em>Instructor</em></a>) – The instructor object to add to the database</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if instructor was added successfully, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.add_student">
+<span class="sig-name descname"><span class="pre">add_student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="school_management.html#school_management.Student" title="school_management.Student"><span class="pre">Student</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.add_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.add_student" title="Link to this definition"></a></dt>
+<dd><p>Add a new student to the database.</p>
+<p>Inserts a student record with all validation constraints applied.
+Handles duplicate student ID and email address errors gracefully.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>student</strong> (<a class="reference internal" href="school_management.html#school_management.Student" title="school_management.Student"><em>Student</em></a>) – The student object to add to the database</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if student was added successfully, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.backup_database">
+<span class="sig-name descname"><span class="pre">backup_database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backup_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.backup_database"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.backup_database" title="Link to this definition"></a></dt>
+<dd><p>Create a backup copy of the database file.</p>
+<p>Creates a timestamped backup copy of the database file for data recovery purposes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>backup_path</strong> (<em>str</em><em>, </em><em>optional</em>) – Path for the backup file, defaults to auto-generated timestamped name</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if backup was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.delete_course">
+<span class="sig-name descname"><span class="pre">delete_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">course_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.delete_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.delete_course" title="Link to this definition"></a></dt>
+<dd><p>Delete a course from the database.</p>
+<p>Removes the course record and all associated student registrations
+due to CASCADE constraints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>course_id</strong> (<em>str</em>) – The ID of the course to delete</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if deletion was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.delete_instructor">
+<span class="sig-name descname"><span class="pre">delete_instructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instructor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.delete_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.delete_instructor" title="Link to this definition"></a></dt>
+<dd><p>Delete an instructor from the database.</p>
+<p>Removes the instructor record and sets instructor_id to NULL
+in associated courses due to SET NULL constraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>instructor_id</strong> (<em>str</em>) – The ID of the instructor to delete</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if deletion was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.delete_student">
+<span class="sig-name descname"><span class="pre">delete_student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.delete_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.delete_student" title="Link to this definition"></a></dt>
+<dd><p>Delete a student from the database.</p>
+<p>Removes the student record and all associated course registrations
+due to CASCADE constraints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>student_id</strong> (<em>str</em>) – The ID of the student to delete</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if deletion was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.export_to_csv">
+<span class="sig-name descname"><span class="pre">export_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.export_to_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.export_to_csv" title="Link to this definition"></a></dt>
+<dd><p>Export database table to CSV format.</p>
+<p>Exports the specified table or view to a CSV file with proper headers.
+Supports exporting students, instructors, courses, and registrations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – Name of the table to export (‘students’, ‘instructors’, ‘courses’, ‘registrations’)</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – Path to the output CSV file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if export was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.get_all_courses">
+<span class="sig-name descname"><span class="pre">get_all_courses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.get_all_courses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.get_all_courses" title="Link to this definition"></a></dt>
+<dd><p>Retrieve all courses with instructor information from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of tuples containing (course_id, course_name, instructor_id, instructor_name)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.get_all_instructors">
+<span class="sig-name descname"><span class="pre">get_all_instructors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.get_all_instructors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.get_all_instructors" title="Link to this definition"></a></dt>
+<dd><p>Retrieve all instructors from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of tuples containing (instructor_id, name, age, email)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.get_all_students">
+<span class="sig-name descname"><span class="pre">get_all_students</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.get_all_students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.get_all_students" title="Link to this definition"></a></dt>
+<dd><p>Retrieve all students from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of tuples containing (student_id, name, age, email)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.get_course_students">
+<span class="sig-name descname"><span class="pre">get_course_students</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">course_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.get_course_students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.get_course_students" title="Link to this definition"></a></dt>
+<dd><p>Get all students enrolled in a specific course.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>course_id</strong> (<em>str</em>) – The ID of the course</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of tuples containing (student_id, name)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.get_database_statistics">
+<span class="sig-name descname"><span class="pre">get_database_statistics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.get_database_statistics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.get_database_statistics" title="Link to this definition"></a></dt>
+<dd><p>Generate comprehensive database statistics.</p>
+<p>Provides overview statistics including record counts and popular courses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary containing database statistics</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.get_instructor_courses">
+<span class="sig-name descname"><span class="pre">get_instructor_courses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instructor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.get_instructor_courses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.get_instructor_courses" title="Link to this definition"></a></dt>
+<dd><p>Get all courses assigned to a specific instructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>instructor_id</strong> (<em>str</em>) – The ID of the instructor</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of tuples containing (course_id, course_name)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.get_student_courses">
+<span class="sig-name descname"><span class="pre">get_student_courses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.get_student_courses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.get_student_courses" title="Link to this definition"></a></dt>
+<dd><p>Get all courses registered by a specific student.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>student_id</strong> (<em>str</em>) – The ID of the student</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of tuples containing (course_id, course_name)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.init_database">
+<span class="sig-name descname"><span class="pre">init_database</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.init_database"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.init_database" title="Link to this definition"></a></dt>
+<dd><p>Initialize the database with all required tables and triggers.</p>
+<p>Creates the complete database schema including:
+- Students table with validation constraints
+- Instructors table with validation constraints
+- Courses table with foreign key relationships
+- Student-course registration junction table
+- Automatic timestamp update triggers</p>
+<p>All tables include created_at and updated_at timestamp fields.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.load_system_from_db">
+<span class="sig-name descname"><span class="pre">load_system_from_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="school_management.html#school_management.SchoolManagementSystem" title="school_management.SchoolManagementSystem"><span class="pre">SchoolManagementSystem</span></a></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.load_system_from_db"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.load_system_from_db" title="Link to this definition"></a></dt>
+<dd><p>Load all data from database into a SchoolManagementSystem object.</p>
+<p>Reconstructs the complete object hierarchy with all relationships
+between students, instructors, and courses properly established.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A fully populated SchoolManagementSystem object</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="school_management.html#school_management.SchoolManagementSystem" title="school_management.SchoolManagementSystem">SchoolManagementSystem</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.register_student_to_course">
+<span class="sig-name descname"><span class="pre">register_student_to_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">course_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.register_student_to_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.register_student_to_course" title="Link to this definition"></a></dt>
+<dd><p>Register a student for a course in the database.</p>
+<p>Creates a registration record linking a student to a course.
+Prevents duplicate registrations and validates foreign key relationships.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>student_id</strong> (<em>str</em>) – The ID of the student to register</p></li>
+<li><p><strong>course_id</strong> (<em>str</em>) – The ID of the course to register for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if registration was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.search_courses">
+<span class="sig-name descname"><span class="pre">search_courses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.search_courses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.search_courses" title="Link to this definition"></a></dt>
+<dd><p>Search for courses by name or ID.</p>
+<p>Performs case-insensitive partial matching and includes instructor information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>search_term</strong> (<em>str</em>) – The term to search for</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of tuples containing (course_id, course_name, instructor_id, instructor_name)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.search_instructors">
+<span class="sig-name descname"><span class="pre">search_instructors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.search_instructors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.search_instructors" title="Link to this definition"></a></dt>
+<dd><p>Search for instructors by name, ID, or email.</p>
+<p>Performs case-insensitive partial matching across all searchable fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>search_term</strong> (<em>str</em>) – The term to search for</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of tuples containing (instructor_id, name, age, email)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.search_students">
+<span class="sig-name descname"><span class="pre">search_students</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.search_students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.search_students" title="Link to this definition"></a></dt>
+<dd><p>Search for students by name, ID, or email.</p>
+<p>Performs case-insensitive partial matching across all searchable fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>search_term</strong> (<em>str</em>) – The term to search for</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of tuples containing (student_id, name, age, email)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.sync_system_to_db">
+<span class="sig-name descname"><span class="pre">sync_system_to_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="school_management.html#school_management.SchoolManagementSystem" title="school_management.SchoolManagementSystem"><span class="pre">SchoolManagementSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.sync_system_to_db"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.sync_system_to_db" title="Link to this definition"></a></dt>
+<dd><p>Synchronize a SchoolManagementSystem object to the database.</p>
+<p>Completely replaces all database contents with the data from the
+provided system object. This operation is destructive and irreversible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>system</strong> (<a class="reference internal" href="school_management.html#school_management.SchoolManagementSystem" title="school_management.SchoolManagementSystem"><em>SchoolManagementSystem</em></a>) – The system object to synchronize to the database</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if synchronization was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.unregister_student_from_course">
+<span class="sig-name descname"><span class="pre">unregister_student_from_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">course_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.unregister_student_from_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.unregister_student_from_course" title="Link to this definition"></a></dt>
+<dd><p>Unregister a student from a specific course.</p>
+<p>Removes the registration record linking the student to the course.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>student_id</strong> (<em>str</em>) – The ID of the student to unregister</p></li>
+<li><p><strong>course_id</strong> (<em>str</em>) – The ID of the course to unregister from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if unregistration was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.update_course">
+<span class="sig-name descname"><span class="pre">update_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">course_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">course_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instructor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.update_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.update_course" title="Link to this definition"></a></dt>
+<dd><p>Update course information in the database.</p>
+<p>Updates only the specified fields, leaving others unchanged.
+Automatically updates the updated_at timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>course_id</strong> (<em>str</em>) – The ID of the course to update</p></li>
+<li><p><strong>course_name</strong> (<em>str</em><em>, </em><em>optional</em>) – New name for the course, defaults to None</p></li>
+<li><p><strong>instructor_id</strong> (<em>str</em><em>, </em><em>optional</em>) – New instructor ID for the course, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if update was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.update_instructor">
+<span class="sig-name descname"><span class="pre">update_instructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instructor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.update_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.update_instructor" title="Link to this definition"></a></dt>
+<dd><p>Update instructor information in the database.</p>
+<p>Updates only the specified fields, leaving others unchanged.
+Automatically updates the updated_at timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>instructor_id</strong> (<em>str</em>) – The ID of the instructor to update</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – New name for the instructor, defaults to None</p></li>
+<li><p><strong>age</strong> (<em>int</em><em>, </em><em>optional</em>) – New age for the instructor, defaults to None</p></li>
+<li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – New email for the instructor, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if update was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="database_manager.DatabaseManager.update_student">
+<span class="sig-name descname"><span class="pre">update_student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/database_manager.html#DatabaseManager.update_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#database_manager.DatabaseManager.update_student" title="Link to this definition"></a></dt>
+<dd><p>Update student information in the database.</p>
+<p>Updates only the specified fields, leaving others unchanged.
+Automatically updates the updated_at timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>student_id</strong> (<em>str</em>) – The ID of the student to update</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – New name for the student, defaults to None</p></li>
+<li><p><strong>age</strong> (<em>int</em><em>, </em><em>optional</em>) – New age for the student, defaults to None</p></li>
+<li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – New email for the student, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if update was successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="documented proj" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="integrated_gui.html" class="btn btn-neutral float-right" title="integrated_gui module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, AbdelRahman ElKouche.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

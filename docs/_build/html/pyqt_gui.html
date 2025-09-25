@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyqt_gui module &mdash; PyQt5/Tkinter 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="school_management module" href="school_management.html" />
+    <link rel="prev" title="integrated_gui module" href="integrated_gui.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyQt5/Tkinter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">documented proj</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="database_manager.html">database_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrated_gui.html">integrated_gui module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pyqt_gui module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.add_course"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.add_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.add_instructor"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.add_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.add_student"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.add_student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.assign_instructor"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.assign_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.clear_course_form"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.clear_course_form()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.clear_instructor_form"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.clear_instructor_form()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.clear_student_form"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.clear_student_form()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_course_tab"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_course_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_course_table"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_course_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_display_tab"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_display_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_instructor_tab"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_instructor_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_instructor_table"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_instructor_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_registration_tab"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_registration_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_search_tab"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_search_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_student_tab"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_student_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.create_student_table"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.create_student_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.delete_selected"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.delete_selected()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.export_to_csv"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.export_to_csv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.init_ui"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.init_ui()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.load_data"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.on_search"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.on_search()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.refresh_displays"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.refresh_displays()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.register_student"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.register_student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.save_data"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.save_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.validate_age"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.validate_age()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.validate_email"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.validate_email()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.validate_id"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.validate_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_gui.SchoolManagementPyQt.validate_name"><code class="docutils literal notranslate"><span class="pre">SchoolManagementPyQt.validate_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_gui.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="school_management.html">school_management module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyQt5/Tkinter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">documented proj</a></li>
+      <li class="breadcrumb-item active">pyqt_gui module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pyqt_gui.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pyqt_gui">
+<span id="pyqt-gui-module"></span><h1>pyqt_gui module<a class="headerlink" href="#module-pyqt_gui" title="Link to this heading"></a></h1>
+<p>PyQt5 GUI Module for School Management System</p>
+<p>This module provides a comprehensive PyQt5-based graphical user interface
+for the school management system. It includes tabbed interfaces for managing
+students, instructors, courses, registrations, and provides search functionality
+with data persistence capabilities.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_gui.</span></span><span class="sig-name descname"><span class="pre">SchoolManagementPyQt</span></span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>Main PyQt5 application window for the school management system.</p>
+<p>Provides a comprehensive GUI interface with tabbed navigation for managing
+students, instructors, courses, and their relationships. Features include
+data entry forms, search functionality, data export capabilities, and
+persistent storage using JSON files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<a class="reference internal" href="school_management.html#school_management.SchoolManagementSystem" title="school_management.SchoolManagementSystem"><em>SchoolManagementSystem</em></a>) – The core school management system instance</p></li>
+<li><p><strong>tab_widget</strong> (<em>QTabWidget</em>) – Main tabbed interface container</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.add_course">
+<span class="sig-name descname"><span class="pre">add_course</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.add_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.add_course" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.add_instructor">
+<span class="sig-name descname"><span class="pre">add_instructor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.add_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.add_instructor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.add_student">
+<span class="sig-name descname"><span class="pre">add_student</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.add_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.add_student" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.assign_instructor">
+<span class="sig-name descname"><span class="pre">assign_instructor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.assign_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.assign_instructor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.clear_course_form">
+<span class="sig-name descname"><span class="pre">clear_course_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.clear_course_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.clear_course_form" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.clear_instructor_form">
+<span class="sig-name descname"><span class="pre">clear_instructor_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.clear_instructor_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.clear_instructor_form" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.clear_student_form">
+<span class="sig-name descname"><span class="pre">clear_student_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.clear_student_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.clear_student_form" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_course_tab">
+<span class="sig-name descname"><span class="pre">create_course_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_course_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_course_tab" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_course_table">
+<span class="sig-name descname"><span class="pre">create_course_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_course_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_course_table" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_display_tab">
+<span class="sig-name descname"><span class="pre">create_display_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_display_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_display_tab" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_instructor_tab">
+<span class="sig-name descname"><span class="pre">create_instructor_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_instructor_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_instructor_tab" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_instructor_table">
+<span class="sig-name descname"><span class="pre">create_instructor_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_instructor_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_instructor_table" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_registration_tab">
+<span class="sig-name descname"><span class="pre">create_registration_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_registration_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_registration_tab" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_search_tab">
+<span class="sig-name descname"><span class="pre">create_search_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_search_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_search_tab" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_student_tab">
+<span class="sig-name descname"><span class="pre">create_student_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_student_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_student_tab" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.create_student_table">
+<span class="sig-name descname"><span class="pre">create_student_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.create_student_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.create_student_table" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.delete_selected">
+<span class="sig-name descname"><span class="pre">delete_selected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.delete_selected"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.delete_selected" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.export_to_csv">
+<span class="sig-name descname"><span class="pre">export_to_csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.export_to_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.export_to_csv" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.init_ui">
+<span class="sig-name descname"><span class="pre">init_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.init_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.init_ui" title="Link to this definition"></a></dt>
+<dd><p>Initialize the user interface components.</p>
+<p>Sets up the main window, creates the tabbed interface, and initializes
+all tab content including student management, instructor management,
+course management, registration, data display, and search functionality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.load_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.on_search">
+<span class="sig-name descname"><span class="pre">on_search</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.on_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.on_search" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.refresh_displays">
+<span class="sig-name descname"><span class="pre">refresh_displays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.refresh_displays"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.refresh_displays" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.register_student">
+<span class="sig-name descname"><span class="pre">register_student</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.register_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.register_student" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.save_data">
+<span class="sig-name descname"><span class="pre">save_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.save_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.save_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.validate_age">
+<span class="sig-name descname"><span class="pre">validate_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.validate_age"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.validate_age" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.validate_email">
+<span class="sig-name descname"><span class="pre">validate_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.validate_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.validate_email" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.validate_id">
+<span class="sig-name descname"><span class="pre">validate_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.validate_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.validate_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_gui.SchoolManagementPyQt.validate_name">
+<span class="sig-name descname"><span class="pre">validate_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#SchoolManagementPyQt.validate_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.SchoolManagementPyQt.validate_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyqt_gui.main">
+<span class="sig-prename descclassname"><span class="pre">pyqt_gui.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_gui.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_gui.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="integrated_gui.html" class="btn btn-neutral float-left" title="integrated_gui module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="school_management.html" class="btn btn-neutral float-right" title="school_management module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, AbdelRahman ElKouche.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
