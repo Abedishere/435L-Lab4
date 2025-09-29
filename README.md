@@ -9,14 +9,19 @@ This repository contains the School Management System project developed in Lab 2
 
 ### Project Structure
 ```
-├── .gitignore             # Python project ignore patterns
-├── README.md              # Project documentation
-├── database_manager.py    # Documented database operations (from documented proj)
-├── school_management.py   # Documented core business logic (from documented proj)
-├── integrated_gui.py      # Documented combined interface (from documented proj)
-├── pyqt_gui.py           # Documented PyQt interface (from documented proj)
-├── tkinter_gui.py        # Tkinter interface (ready for enhancement)
-└── docs/                 # Sphinx documentation for documented modules
+├── .gitignore                    # Python project ignore patterns
+├── README.md                     # Project documentation
+├── database_manager.py           # Documented database operations
+├── school_management.py          # Documented core business logic
+├── pyqt_implementation/          # PyQt GUI implementations
+│   ├── pyqt_gui.py              # Basic PyQt interface
+│   └── integrated_gui.py        # PyQt interface with database support
+├── tkinter_implementation/       # Tkinter GUI implementations
+│   └── apptk.py                 # Tkinter interface by Karim
+├── school.py                     # School management logic by Karim
+├── start.py                      # Main entry point by Karim
+├── store.py                      # Data storage by Karim
+└── docs/                         # Sphinx documentation for documented modules
 ```
 
 ### Features
@@ -30,9 +35,29 @@ This repository contains the School Management System project developed in Lab 2
 - **Documentation**: Sphinx-generated documentation for core modules
 
 ### How to Run
-1. **Tkinter Interface**: `python tkinter_gui.py`
-2. **PyQt Interface**: `python pyqt_gui.py`
-3. **Integrated Interface**: `python integrated_gui.py`
+
+#### PyQt Implementations
+1. **Basic PyQt Interface**:
+   ```bash
+   python pyqt_implementation/pyqt_gui.py
+   ```
+
+2. **PyQt Interface with Database Support**:
+   ```bash
+   python pyqt_implementation/integrated_gui.py
+   ```
+
+#### Tkinter Implementation
+1. **Karim's Tkinter Interface**:
+   ```bash
+   python tkinter_implementation/apptk.py
+   ```
+
+#### Alternative Entry Points
+1. **Karim's Main Application**:
+   ```bash
+   python start.py
+   ```
 
 ### Requirements
 - Python 3.x
@@ -42,14 +67,14 @@ This repository contains the School Management System project developed in Lab 2
 
 ### Lab 4 Collaboration Setup
 This project is set up for collaborative development between two students:
-- **Student 1**: Enhance and document the Tkinter interface (`tkinter_gui.py`)
-- **Student 2**: Work with the documented PyQt interface and backend integration
+- **AbdelRahman El Kouche**: PyQt interface implementations with database integration
+- **Karim Abou Daher**: Tkinter interface and alternative backend implementation
 
 ### File Organization for Collaboration
-- **Core documented modules** (database_manager.py, school_management.py): Shared foundation
-- **PyQt implementation**: Fully documented and ready for advanced features
-- **Tkinter implementation**: Basic version ready for enhancement and documentation
-- **Integration example**: Shows how both frameworks can work together
+- **Core modules** (database_manager.py, school_management.py): Shared foundation by AbdelRahman
+- **PyQt implementation**: Complete PyQt interfaces with basic and database-integrated versions
+- **Tkinter implementation**: Karim's Tkinter interface implementation
+- **Alternative backend**: Karim's school.py, store.py, and start.py provide alternative implementation
 
 ### Git Workflow
 1. Clone the repository

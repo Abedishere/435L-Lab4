@@ -1,0 +1,13 @@
+{
+  "students": [
+    {
+      "name": "asdf",
+      "age": 123,
+      "email": "asdf@mail.com",
+      "studentid": "12",
+      "courses": []
+    }
+  ],
+  "instructors": [],
+  "courses": []
+}
