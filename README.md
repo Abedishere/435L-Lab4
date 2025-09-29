@@ -56,7 +56,7 @@ This repository contains the School Management System project developed in Lab 2
 #### Alternative Entry Points
 1. **Karim's Main Application**:
    ```bash
-   python start.py
+   python tkinter_implementation/start.py
    ```
 
 ### Requirements
