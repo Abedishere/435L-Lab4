@@ -15,6 +15,10 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                              QAbstractItemView, QSplitter, QTextEdit)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from school_management import SchoolManagementSystem, Student, Instructor, Course
 
 
